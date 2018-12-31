@@ -1,0 +1,56 @@
+〔?xml 〈version “1.0” encoding “UTF-8”〉〕
+〔?xml-stylesheet 〈href “chrome://global/skin” type “text/css”〉〕
+〔?xml-stylesheet 〈href “chrome://kakusu/skin/overlay.css” type “text/css”〉〕
+〔!DOCTYPE overlay SYSTEM “chrome://kakusu/locale/overlay.dtd”〕
+〔overlay 〈
+		id “kakusu-overlay”
+		xmlns “http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul”
+	〉
+	〔script 〈
+			src “chrome://kakusu/content/overlay.js”
+			type “application/ecmascript”
+		〉
+	〕
+	〔keyset
+		〔key 〈
+				id “kakusu-key” 
+				keycode “VK_F9”
+				oncommand “yami.kakusu.hide(yami.kakusu.gethwnd('navigator:browser'));”
+			〉
+		〕
+	〕
+	〔menupopup 〈id “menu_FilePopup”〉
+		〔menuitem 〈
+				accesskey “&yami.kakusu.menuitem.accesskey;”
+				key “kakusu-key”
+				id “kakusu-menuitem”
+				label “&yami.kakusu.menuitem.label;”
+				insertafter “goOfflineMenuitem”
+				insertbefore “menu_restart, menu_FileQuitItem”
+				oncommand “yami.kakusu.hide(yami.kakusu.gethwnd('navigator:browser'));”
+			〉
+		〕
+	〕
+	〔vbox 〈id “appmenuPrimaryPane”〉
+		〔menuitem 〈
+				accesskey “&yami.kakusu.menuitem.accesskey;”
+				key “kakusu-key”
+				id “kakusu-menuitem”
+				label “&yami.kakusu.menuitem.label;”
+				insertbefore “appmenu_restart”
+				oncommand “yami.kakusu.hide(yami.kakusu.gethwnd('navigator:browser'));”
+			〉
+		〕
+	〕
+	〔toolbarpalette 〈id “BrowserToolbarPalette”〉
+		〔toolbarbutton 〈
+				class “toolbarbutton-1 kakusu-toolbarbutton”
+				id “kakusu-button”
+				label “&yami.kakusu.button.label;”
+				oncommand “yami.kakusu.hide(yami.kakusu.gethwnd('navigator:browser'));”
+				title “&yami.kakusu.button.title;”
+				tooltiptext “&yami.kakusu.button.tooltip;”
+			〉
+		〕
+	〕
+〕

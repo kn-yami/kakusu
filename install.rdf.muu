@@ -1,0 +1,65 @@
+〔?xml 〈version “1.0” encoding “UTF-8”〉〕
+〔RDF 〈
+		xmlns “http://www.w3.org/1999/02/22-rdf-syntax-ns#”
+		xmlns:em “http://www.mozilla.org/2004/em-rdf#”
+	〉
+	〔Description 〈about “urn:mozilla:install-manifest”〉
+		〔em:id “kakusu@kurosu”〕
+		〔em:version “0.7.47”〕
+
+		〔em:type “2”〕
+		〔em:strictCompatibility “false”〕
+		〔em:multiprocessCompatible “false”〕
+		〔em:unpack “true”〕
+		〔em:targetPlatform “WINNT”〕
+
+		〔em:iconURL “chrome://kakusu/skin/icon48.png”〕
+		〔em:icon64URL “chrome://kakusu/skin/icon64.png”〕
+
+		〔em:creator “yami”〕
+		〔em:name “kakusu”〕
+		〔em:description 
+			“Allows user to hide the main window. The window can be made ”
+			“visible again by launching the application (only in some ”
+			“applications), clicking a notification or clicking the new mail ”
+			“tray icon (Interlink only).”
+		〕
+
+		「Ambassador」
+		〔em:targetApplication
+			〔Description
+				〔em:id “{4523665a-317f-4a66-9376-3763d1ad1978}”〕
+				〔em:minVersion “1.0.0”〕
+				〔em:maxVersion “1.0.*”〕
+			〕
+		〕
+
+		「Basilisk」
+		〔em:targetApplication
+			〔Description
+				〔em:id “{ec8030f7-c20a-464f-9b0e-13a3a9e97384}”〕
+				〔em:minVersion “52.9.2018.05.15”〕
+				〔em:maxVersion “52.9.*”〕
+				〔em:basilisk “true”〕
+			〕
+		〕
+
+		「Interlink」
+		〔em:targetApplication
+			〔Description
+				〔em:id “{3550f703-e582-4d05-9a08-453d09bdfdc6}”〕
+				〔em:minVersion “52.9.6884”〕
+				〔em:maxVersion “52.9.*”〕
+			〕
+		〕
+
+		「Pale Moon」
+		〔em:targetApplication
+			〔Description
+				〔em:id “{8de7fcbb-c55c-4fbe-bfc5-fc555c87dbc4}”〕
+				〔em:minVersion “28.0.0”〕
+				〔em:maxVersion “28.2.*”〕
+			〕
+		〕
+	〕
+〕
