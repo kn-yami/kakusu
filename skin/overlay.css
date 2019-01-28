@@ -3,11 +3,17 @@ window:not([active="true"]) toolbarbutton.kakusu-toolbarbutton {
 	list-style-image: url("chrome://kakusu/skin/icon24.png");
 }
 
+toolbar#toolbar-menubar > toolbarbutton.kakusu-toolbarbutton {
+	/* -moz-appearance: none; */
+	list-style-image: url("chrome://kakusu/skin/icon16.png");
+	-moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
 #kakusu-button {
 	-moz-image-region: rect(0px, 24px, 24px, 0px);
 }
 
-#kakusu-statusbarpanel {
+#kakusu-statusbarpanel	{
 	list-style-image: url("chrome://kakusu/skin/icon16.png");
 }
 

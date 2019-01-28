@@ -1,0 +1,9 @@
+#include "menu.h"
+
+IDM_POPUPMENU MENU
+BEGIN
+	POPUP "kakusu"
+	BEGIN
+		MENUITEM "E&xit", IDM_EXIT
+	END
+END

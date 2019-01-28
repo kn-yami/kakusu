@@ -1,0 +1,23 @@
+CC=cl
+CCFLAGS=-c -utf-8 -O2 -GL -Gd -GF -GR- -Gw -UNICODE -nologo
+LD=link
+LDFLAGS=-release -ltcg -opt:ref -opt:icf=8192 -dll -nologo
+RC=rc
+RCFLAGS=-nologo
+
+OFILES=hlp.obj icon.obj kakusu.obj menu.obj win.obj
+HFILES=dat.h fns.h menu.h
+RFILES=menu.res
+
+dll:V: $HFILES $OFILES $RFILES
+	$LD $LDFLAGS $OFILES $RFILES > nul
+
+%.obj: %.c
+	$CC $CCFLAGS $stem.c > nul
+%.res: %.rc
+	$RC $RCFLAGS $stem.rc > nul
+
+clean:V:
+	cmd /c del *.obj *.exp *.lib *.res
+nuke:V: clean
+	cmd /c del *.dll

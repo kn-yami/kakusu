@@ -23,7 +23,7 @@
 		〔statusbarpanel 〈
 				class “statusbarpanel-iconic”
 				id “kakusu-statusbarpanel”
-				insertbefore “alert-status”
+				insertafter “offline-status”
 				onclick “yami.kakusu.hide(yami.kakusu.gethwnd('irc:ambassador'));”
 				tooltiptext “&yami.kakusu.button.tooltip;”
 			〉

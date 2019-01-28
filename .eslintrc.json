@@ -5,7 +5,9 @@
 		"gBrowser": false,
 		"Services": false,
 		"client": false,
-		"kakusu": false
+		"kakusu": false,
+		"CMD_NO_HELP": false,
+		"CMD_CONSOLE": false
 	},
     "env": {
         "browser": true,
@@ -20,14 +22,14 @@
             "never"
         ],
         "array-callback-return": "error",
-        "array-element-newline": "error",
+        "array-element-newline": "off",
         "arrow-body-style": "error",
         "arrow-parens": "error",
         "arrow-spacing": "error",
         "block-scoped-var": "error",
         "block-spacing": "error",
         "brace-style": [
-            "error",
+            "off",
             "1tbs"
         ],
         "callback-return": "error",
@@ -74,7 +76,7 @@
         "func-call-spacing": "error",
         "func-name-matching": "error",
         "func-names": "off",
-        "func-style": "error",
+        "func-style": "off",
         "function-paren-newline": "off",
         "generator-star-spacing": "error",
         "getter-return": "error",
@@ -161,7 +163,7 @@
         "no-new-require": "error",
         "no-new-wrappers": "error",
         "no-octal-escape": "error",
-        "no-param-reassign": "error",
+        "no-param-reassign": "off",
         "no-path-concat": "error",
         "no-plusplus": "error",
         "no-process-env": "error",
@@ -221,7 +223,7 @@
         "padded-blocks": "off",
         "padding-line-between-statements": "error",
         "prefer-const": "off",
-        "prefer-destructuring": "error",
+        "prefer-destructuring": "off",
         "prefer-numeric-literals": "error",
         "prefer-promise-reject-errors": "error",
         "prefer-reflect": "error",
@@ -235,7 +237,7 @@
         ],
         "radix": "error",
         "require-await": "error",
-        "require-jsdoc": "error",
+        "require-jsdoc": "off",
         "rest-spread-spacing": "error",
         "semi": "error",
         "semi-spacing": "error",

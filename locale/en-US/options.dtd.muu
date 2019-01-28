@@ -1,0 +1,5 @@
+〔!ENTITY yami.kakusu.options.enable.label “Enable icon”〕
+〔!ENTITY yami.kakusu.options.enable.desc “Enables the notification icon.”〕
+〔!ENTITY yami.kakusu.options.hide.label “Hide icon”〕
+〔!ENTITY yami.kakusu.options.hide.desc “Hides the notification icon when there are no hidden windows.”〕
+〔!ENTITY yami.kakusu.options.statusbarpanel.label “Enable status bar icon”〕

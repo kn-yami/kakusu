@@ -20,23 +20,34 @@
 		〕
 	〕
 	〔menupopup 〈id “menu_FilePopup”〉
+	〔menuseparator 〈insertafter “printMenuItem”〉〕
 		〔menuitem 〈
 				accesskey “&yami.kakusu.menuitem.accesskey;”
 				key “kakusu-key”
 				id “kakusu-menuitem”
 				label “&yami.kakusu.menuitem.label;”
-				insertbefore “menu_FileQuitItem”
+				insertbefore “menu_FileQuitSeparator”
 				oncommand “yami.kakusu.hide(yami.kakusu.gethwnd('mail:3pane'));”
 			〉
 		〕
 	〕
 	〔toolbarpalette 〈id “MailToolbarPalette”〉
 		〔toolbarbutton 〈
-				class “toolbarbutton-1 kakusu-toolbarbutton”
+				class “toolbarbutton-1 kakusu-toolbarbutton chromeclass-toolbar-additional”
 				id “kakusu-button”
 				label “&yami.kakusu.button.label;”
 				oncommand “yami.kakusu.hide(yami.kakusu.gethwnd('mail:3pane'));”
 				title “&yami.kakusu.button.title;”
+				tooltiptext “&yami.kakusu.button.tooltip;”
+			〉
+		〕
+	〕
+	〔statusbar 〈id “status-bar”〉
+		〔statusbarpanel 〈
+				class “statusbarpanel-iconic”
+				id “kakusu-statusbarpanel”
+				insertafter “abp-status”
+				onclick “yami.kakusu.hide(yami.kakusu.gethwnd('mail:3pane'));”
 				tooltiptext “&yami.kakusu.button.tooltip;”
 			〉
 		〕

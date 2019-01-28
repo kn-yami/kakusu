@@ -1,0 +1,2 @@
+#define IDM_POPUPMENU 101
+#define IDM_EXIT 102
