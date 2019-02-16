@@ -6,11 +6,12 @@
 	〔Description 〈
 			about “urn:mozilla:install-manifest”
 			em:id “kakusu@kurosu”
-			em:version “1.0.0a1”
+			em:version “1.0.0”
+			em:license “COPYRIGHT”
 
 			em:name “kakusu”
-			em:description “Hide windows and use the notification icon to get them back!”
 			em:creator “yami”
+			em:description “Hide windows and use the notification icon to get them back!”
 
 			em:type “2”
 			em:unpack “true”
@@ -41,6 +42,16 @@
 					em:id “{ec8030f7-c20a-464f-9b0e-13a3a9e97384}”
 					em:minVersion “52.9.2018.05.15”
 					em:maxVersion “52.9.*”
+				〉
+			〕
+		〕
+
+		「Borealis」
+		〔em:targetApplication
+			〔Description 〈
+					em:id “{a3210b97-8e8a-4737-9aa0-aa0e607640b9}”
+					em:minVersion “1.0.0a1”
+					em:maxVersion “1.0.*”
 				〉
 			〕
 		〕

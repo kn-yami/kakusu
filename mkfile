@@ -1,7 +1,7 @@
 ZIP=7za u -mx9 -tzip
 M2X=m2x
 CP=cp
-CPD= cp -r
+CPD=cp -r
 TIDYFLAGS=-xml -b -e -q --indent-with-tabs yes --newline=LF --preserve-entities yes --input-xml yes --output-xml yes --mute UNKNOWN_ENTITY
 NAME=kakusu
 

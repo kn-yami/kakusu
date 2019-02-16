@@ -21,7 +21,7 @@ yami.kakusu = {
 
 	halt: function() {
 		if(kakusu.debug == true)
-			kakusu.log("Halted.");
+			kakusu.log("halted");
 	},
 
 	observe: function(subject, topic, data) {
@@ -41,16 +41,18 @@ yami.kakusu = {
 		);
 		client.commandManager.defineCommands([
 			[
-				"kakusu-hide",
+				"hide",
 				yami.kakusu.irchide,
 				0x20 | 0x01
 			]
 		]);
+		client.commandManager.commands.hide.help =
+			sb.GetStringFromName("yami.kakusu.command.help");
 		client.menuSpecs["mainmenu:ambassador"].items.splice(
 			client.menuSpecs["mainmenu:ambassador"].items.indexOf("exit") - 1,
 			0,
 			[
-				"kakusu-hide",
+				"hide",
 				{
 					accesskey:
 						sb.GetStringFromName("yami.kakusu.menuitem.accesskey"),

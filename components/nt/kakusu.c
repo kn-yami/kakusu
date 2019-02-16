@@ -61,7 +61,6 @@ threadproc(LPVOID lparam)
 	MSG msg;
 	WNDCLASSW wc;
 	DWORD err;
-	/* mod = GetModuleHandleW(L"kakusu.dll"); */
 	wc.style = CS_HREDRAW | CS_VREDRAW;
 	wc.cbClsExtra = 0;
 	wc.cbWndExtra = 0;
@@ -84,8 +83,6 @@ threadproc(LPVOID lparam)
 	ni.uCallbackMessage = WM_APP;
 	ni.uVersion = NOTIFYICON_VERSION_4;
 	lstrcpyW(ni.szTip, tip);
-	/* ShowWindow(dwnd, SW_SHOWNORMAL);
-	addicon(); */
 	menu = LoadMenuW(mod, MAKEINTRESOURCEW(IDM_POPUPMENU));
 	popup = GetSubMenu(menu, 0);
 	if(popup == NULL)

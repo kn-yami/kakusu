@@ -20,7 +20,7 @@ yami.kakusu = {
 
 	halt: function() {
 		if(kakusu.debug == true)
-			kakusu.log("Halted.");
+			kakusu.log("halted");
 	},
 
 	observe: function(subject, topic, data) {
