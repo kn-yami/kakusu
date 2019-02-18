@@ -1,7 +1,7 @@
 〔?xml 〈version “1.0” encoding “UTF-8”〉〕
 〔?xml-stylesheet 〈href “chrome://global/skin” type “text/css”〉〕
 〔?xml-stylesheet 〈href “chrome://kakusu/skin/overlay.css” type “text/css”〉〕
-〔!DOCTYPE overlay SYSTEM “chrome://kakusu/locale/overlay.dtd”〕
+〔!DOCTYPE options SYSTEM “chrome://kakusu/locale/overlay.dtd”〕
 〔overlay 〈
 		id “kakusu-overlay”
 		xmlns “http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul”
@@ -14,8 +14,30 @@
 	〔keyset
 		〔key 〈
 				id “kakusu-key” 
-				keycode “VK_F9”
-				oncommand “yami.kakusu.hide(yami.kakusu.gethwnd('navigator:browser'));”
+				keycode “VK_F8”
+				oncommand “yamiKakusu.hide(yamiKakusu.gethwnd('navigator:browser'));”
+			〉
+		〕
+	〕
+	〔menupopup 〈id “windowPopup”〉
+		〔menuitem 〈
+				accesskey “&yami.kakusu.menuitem.accesskey;”
+				key “kakusu-key”
+				id “kakusu-menuitem”
+				label “&yami.kakusu.menuitem.label;”
+				insertbefore “sep-window-list”
+				oncommand “yamiKakusu.hide(yamiKakusu.gethwnd());”
+			〉
+		〕
+	〕
+	〔menupopup 〈id “appmenu_windowPopup”〉
+		〔menuitem 〈
+				accesskey “&yami.kakusu.menuitem.accesskey;”
+				key “kakusu-key”
+				id “appmeun_kakusu-menuitem”
+				label “&yami.kakusu.menuitem.label;”
+				insertbefore “appmenu_sep-window-list”
+				oncommand “yamiKakusu.hide(yamiKakusu.gethwnd());”
 			〉
 		〕
 	〕
@@ -31,7 +53,7 @@
 				id “kakusu-menuitem”
 				label “&yami.kakusu.menuitem.label;”
 				insertafter “kakusu-separator”
-				oncommand “yami.kakusu.hide(yami.kakusu.gethwnd('navigator:browser'));”
+				oncommand “yamiKakusu.hide(yamiKakusu.gethwnd('navigator:browser'));”
 			〉
 		〕
 	〕
@@ -39,10 +61,10 @@
 		〔menuitem 〈
 				accesskey “&yami.kakusu.menuitem.accesskey;”
 				key “kakusu-key”
-				id “kakusu-menuitem”
+				id “appmenu_kakusu-menuitem”
 				label “&yami.kakusu.menuitem.label;”
 				insertbefore “appmenu_restart”
-				oncommand “yami.kakusu.hide(yami.kakusu.gethwnd('navigator:browser'));”
+				oncommand “yamiKakusu.hide(yamiKakusu.gethwnd('navigator:browser'));”
 			〉
 		〕
 	〕
@@ -51,7 +73,7 @@
 				class “toolbarbutton-1 kakusu-toolbarbutton chromeclass-toolbar-additional”
 				id “kakusu-button”
 				label “&yami.kakusu.button.label;”
-				oncommand “yami.kakusu.hide(yami.kakusu.gethwnd('navigator:browser'));”
+				oncommand “yamiKakusu.hide(yamiKakusu.gethwnd('navigator:browser'));”
 				title “&yami.kakusu.button.title;”
 				tooltiptext “&yami.kakusu.button.tooltip;”
 			〉
@@ -62,7 +84,7 @@
 				class “statusbarpanel-iconic”
 				id “kakusu-statusbarpanel”
 				insertafter “abp-status”
-				onclick “yami.kakusu.hide(yami.kakusu.gethwnd('navigator:browser'));”
+				oncommand “yamiKakusu.hide(yamiKakusu.gethwnd('navigator:browser'));”
 				tooltiptext “&yami.kakusu.button.tooltip;”
 			〉
 		〕

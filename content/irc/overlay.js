@@ -1,8 +1,8 @@
 "use strict";
 
-var yami = typeof(yami) == "undefined" ? {} : yami;
+var yamiKakusu = typeof(yamiKakusu) == "undefined" ? {} : yamiKakusu;
 
-yami.kakusu = {
+yamiKakusu = {
 	init: function() {
 		Components.utils.import("resource://kakusu/kakusu.jsm");
 		Components.utils.import("resource://gre/modules/Services.jsm");
@@ -10,7 +10,7 @@ yami.kakusu = {
 		this.hide = kakusu.hide;
 		kakusu.debug = false;
 		document.getElementById("kakusu-statusbarpanel").hidden = !Services.prefs.getBoolPref("extensions.yami.kakusu.statusbarpanel.enable");
-		Services.prefs.addObserver("extensions.yami.kakusu.statusbarpanel.enable", yami.kakusu, false);
+		Services.prefs.addObserver("extensions.yami.kakusu.statusbarpanel.enable", yamiKakusu, false);
 		this.initirc();
 		if(kakusu.debug == true)
 			kakusu.log("Initialized.");
@@ -19,12 +19,7 @@ yami.kakusu = {
 		}, Components.interfaces.nsIThread.DISPATCH_NORMAL);
 	},
 
-	halt: function() {
-		if(kakusu.debug == true)
-			kakusu.log("halted");
-	},
-
-	observe: function(subject, topic, data) {
+	observe: function(_subject, topic, data) {
 		let enable;
 		if(topic == "nsPref:changed") {
 			if(data == "extensions.yami.kakusu.statusbarpanel.enable") {
@@ -42,7 +37,7 @@ yami.kakusu = {
 		client.commandManager.defineCommands([
 			[
 				"hide",
-				yami.kakusu.irchide,
+				yamiKakusu.irchide,
 				0x20 | 0x01
 			]
 		]);
@@ -66,17 +61,12 @@ yami.kakusu = {
 	},
 
 	irchide: function() {
-		yami.kakusu.hide(yami.kakusu.gethwnd("irc:ambassador"));
+		yamiKakusu.hide(yamiKakusu.gethwnd("irc:ambassador"));
 	}
 
 };
 
 window.addEventListener("load", function load() {
 	window.removeEventListener("load", load, false);
-	yami.kakusu.init();
+	yamiKakusu.init();
 }, false);
-
-/* window.addEventListener("unload", function unload() {
-	window.removeEventListener("unload", unload, false);
-	yami.kakusu.halt();
-}, false); */

@@ -14,8 +14,8 @@
 	〔keyset
 		〔key 〈
 				id “kakusu-key” 
-				keycode “VK_F9”
-				oncommand “yami.kakusu.hide(yami.kakusu.gethwnd('mail:3pane'));”
+				keycode “VK_F8”
+				oncommand “yamiKakusu.hide(yamiKakusu.gethwnd('mail:3pane'));”
 			〉
 		〕
 	〕
@@ -27,7 +27,7 @@
 				id “kakusu-menuitem”
 				label “&yami.kakusu.menuitem.label;”
 				insertbefore “menu_FileQuitSeparator”
-				oncommand “yami.kakusu.hide(yami.kakusu.gethwnd('mail:3pane'));”
+				oncommand “yamiKakusu.hide(yamiKakusu.gethwnd('mail:3pane'));”
 			〉
 		〕
 	〕
@@ -36,7 +36,7 @@
 				class “toolbarbutton-1 kakusu-toolbarbutton chromeclass-toolbar-additional”
 				id “kakusu-button”
 				label “&yami.kakusu.button.label;”
-				oncommand “yami.kakusu.hide(yami.kakusu.gethwnd('mail:3pane'));”
+				oncommand “yamiKakusu.hide(yamiKakusu.gethwnd('mail:3pane'));”
 				title “&yami.kakusu.button.title;”
 				tooltiptext “&yami.kakusu.button.tooltip;”
 			〉
@@ -47,7 +47,7 @@
 				class “statusbarpanel-iconic”
 				id “kakusu-statusbarpanel”
 				insertafter “abp-status”
-				onclick “yami.kakusu.hide(yami.kakusu.gethwnd('mail:3pane'));”
+				oncommand “yamiKakusu.hide(yamiKakusu.gethwnd('mail:3pane'));”
 				tooltiptext “&yami.kakusu.button.tooltip;”
 			〉
 		〕

@@ -7,7 +7,7 @@
 		xmlns “http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul”
 	〉
 	〔script 〈
-			src “chrome://kakusu/content/overlay.js”
+			src “chrome://kakusu/content/task.js”
 			type “application/ecmascript”
 		〉
 	〕
@@ -15,17 +15,18 @@
 		〔key 〈
 				id “kakusu-key” 
 				keycode “VK_F8”
-				oncommand “yamiKakusu.hide(yamiKakusu.gethwnd('irc:ambassador'));”
+				oncommand “yamiKakusuTask.hide(yamiKakusuTask.gethwnd());”
 			〉
 		〕
 	〕
-	〔statusbar 〈id “status-bar”〉
-		〔statusbarpanel 〈
-				class “statusbarpanel-iconic”
-				id “kakusu-statusbarpanel”
-				insertafter “offline-status”
-				oncommand “yamiKakusu.hide(yamiKakusu.gethwnd('irc:ambassador'));”
-				tooltiptext “&yami.kakusu.button.tooltip;”
+	〔menupopup 〈id “windowPopup”〉
+		〔menuitem 〈
+				accesskey “&yami.kakusu.menuitem.accesskey;”
+				key “kakusu-key”
+				id “kakusu-menuitem”
+				label “&yami.kakusu.menuitem.label;”
+				insertbefore “sep-window-list”
+				oncommand “yamiKakusuTask.hide(yamiKakusuTask.gethwnd());”
 			〉
 		〕
 	〕

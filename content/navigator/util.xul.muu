@@ -7,24 +7,16 @@
 		xmlns “http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul”
 	〉
 	〔script 〈
-			src “chrome://kakusu/content/overlay.js”
+			src “chrome://kakusu/content/util.js”
 			type “application/ecmascript”
 		〉
-	〕
-	〔keyset
-		〔key 〈
-				id “kakusu-key” 
-				keycode “VK_F8”
-				oncommand “yamiKakusu.hide(yamiKakusu.gethwnd('irc:ambassador'));”
-			〉
-		〕
 	〕
 	〔statusbar 〈id “status-bar”〉
 		〔statusbarpanel 〈
 				class “statusbarpanel-iconic”
 				id “kakusu-statusbarpanel”
-				insertafter “offline-status”
-				oncommand “yamiKakusu.hide(yamiKakusu.gethwnd('irc:ambassador'));”
+				insertafter “abp-status”
+				oncommand “yamiKakusuUtil.hide(yamiKakusuUtil.gethwnd());”
 				tooltiptext “&yami.kakusu.button.tooltip;”
 			〉
 		〕

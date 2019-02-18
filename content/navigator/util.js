@@ -1,8 +1,8 @@
 "use strict";
 
-var yamiKakusu = typeof(yamiKakusu) == "undefined" ? {} : yamiKakusu;
+var yamiKakusuUtil = typeof(yamiKakusuUtil) == "undefined" ? {} : yamiKakusuUtil;
 
-yamiKakusu = {
+yamiKakusuUtil = {
 	init: function() {
 		Components.utils.import("resource://kakusu/kakusu.jsm");
 		Components.utils.import("resource://gre/modules/Services.jsm");
@@ -10,12 +10,7 @@ yamiKakusu = {
 		this.hide = kakusu.hide;
 		kakusu.debug = false;
 		document.getElementById("kakusu-statusbarpanel").hidden = !Services.prefs.getBoolPref("extensions.yami.kakusu.statusbarpanel.enable");
-		if(document.getElementById("windowMenu") != null) {
-			document.getElementById("kakusu-separator").hidden = true;
-			document.getElementById("kakusu-menuitem").hidden = true;
-			document.getElementById("appmenu_kakusu-menuitem").hidden = true;
-		}
-		Services.prefs.addObserver("extensions.yami.kakusu.statusbarpanel.enable", yamiKakusu, false);
+		Services.prefs.addObserver("extensions.yami.kakusu.statusbarpanel.enable", yamiKakusuUtil, false);
 		if(kakusu.debug == true)
 			kakusu.log("Initialized.");
 		Services.tm.mainThread.dispatch(function() {
@@ -23,7 +18,7 @@ yamiKakusu = {
 		}, Components.interfaces.nsIThread.DISPATCH_NORMAL);
 	},
 
-	observe: function(_subject, topic, data) {
+	observe: function(subject, topic, data) {
 		let enable;
 		if(topic == "nsPref:changed") {
 			if(data == "extensions.yami.kakusu.statusbarpanel.enable") {
@@ -36,5 +31,5 @@ yamiKakusu = {
 
 window.addEventListener("load", function load() {
 	window.removeEventListener("load", load, false);
-	yamiKakusu.init();
+	yamiKakusuUtil.init();
 }, false);

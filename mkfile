@@ -14,7 +14,14 @@ CONTENT=$CTNDIR/browser/overlay.js\
 	$CTNDIR/irc/options.xul\
 	$CTNDIR/mailnews/overlay.js\
 	$CTNDIR/mailnews/overlay.xul\
-	$CTNDIR/mailnews/options.xul
+	$CTNDIR/mailnews/options.xul\
+	$CTNDIR/navigator/overlay.js\
+	$CTNDIR/navigator/overlay.xul\
+	$CTNDIR/navigator/options.xul\
+	$CTNDIR/navigator/task.js\
+	$CTNDIR/navigator/task.xul\
+	$CTNDIR/navigator/util.js\
+	$CTNDIR/navigator/util.xul
 CMPDIR=components
 COMPONENTS=$CMPDIR/nt/kakusu64.dll $CMPDIR/nt/kakusu32.dll
 DEFAULTS=defaults/preferences/defaults.js

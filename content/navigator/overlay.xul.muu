@@ -11,20 +11,13 @@
 			type “application/ecmascript”
 		〉
 	〕
-	〔keyset
-		〔key 〈
-				id “kakusu-key” 
-				keycode “VK_F8”
-				oncommand “yamiKakusu.hide(yamiKakusu.gethwnd('irc:ambassador'));”
-			〉
-		〕
-	〕
-	〔statusbar 〈id “status-bar”〉
-		〔statusbarpanel 〈
-				class “statusbarpanel-iconic”
-				id “kakusu-statusbarpanel”
-				insertafter “offline-status”
-				oncommand “yamiKakusu.hide(yamiKakusu.gethwnd('irc:ambassador'));”
+	〔toolbarpalette 〈id “BrowserToolbarPalette”〉
+		〔toolbarbutton 〈
+				class “toolbarbutton-1 kakusu-toolbarbutton chromeclass-toolbar-additional”
+				id “kakusu-button”
+				label “&yami.kakusu.button.label;”
+				oncommand “yamiKakusu.hide(yamiKakusu.gethwnd('navigator:browser'));”
+				title “&yami.kakusu.button.title;”
 				tooltiptext “&yami.kakusu.button.tooltip;”
 			〉
 		〕
