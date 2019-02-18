@@ -1,0 +1,5 @@
+〔!ENTITY yami.kakusu.options.enable.label “Włącz ikonę”〕
+〔!ENTITY yami.kakusu.options.enable.desc “Włącz ikonę obszaru powiadomień.”〕
+〔!ENTITY yami.kakusu.options.hide.label “Ukryj ikonę”〕
+〔!ENTITY yami.kakusu.options.hide.desc “Ukry ikonę obszaru powiadomień gdy żadne okno nie jest ukryte.”〕
+〔!ENTITY yami.kakusu.options.statusbarpanel.label “Włącz ikonę paska statusu”〕
