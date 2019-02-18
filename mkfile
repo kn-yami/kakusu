@@ -28,8 +28,8 @@ DEFAULTS=defaults/preferences/defaults.js
 MODDIR=modules
 MODULES=$MODDIR/kakusu.jsm
 LOCDIR=locale
-LANG=en-US
-LOCALE=$LOCDIR/$LANG/overlay.dtd $LOCDIR/$LANG/options.dtd $LOCDIR/$LANG/overlay.properties
+LOCALE=$LOCDIR/en-US/overlay.dtd $LOCDIR/en-US/options.dtd $LOCDIR/en-US/overlay.properties\
+	$LOCDIR/pl-PL/overlay.dtd $LOCDIR/pl-PL/options.dtd $LOCDIR/pl-PL/overlay.properties
 SKINDIR=skin
 META=install.rdf chrome.manifest
 
