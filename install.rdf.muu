@@ -26,6 +26,15 @@
 		〔em:targetPlatform “WINNT_x86-msvc”〕
 		〔em:targetPlatform “WINNT_x86_64-msvc”〕
 
+		〔em:localized
+			〔Description 〈
+					em:locale “pl-PL”
+					em:name “kakusu”
+					em:description “Kakusu pozawana na ukrywanie okien rozszerzanego programu, dodając przy tym ikonę obszaru powiadomień pozwalającą na szybkie ich odzyskanie.”
+				〉
+			〕
+		〕
+
 		「Ambassador」
 		〔em:targetApplication
 			〔Description 〈
