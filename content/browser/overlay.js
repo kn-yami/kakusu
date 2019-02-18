@@ -13,7 +13,8 @@ yamiKakusu = {
 		if(document.getElementById("windowMenu") != null) {
 			document.getElementById("kakusu-separator").hidden = true;
 			document.getElementById("kakusu-menuitem").hidden = true;
-			document.getElementById("appmenu_kakusu-menuitem").hidden = true;
+			if(document.getElementById("appmenu_kakusu-menuitem") != null)
+				document.getElementById("appmenu_kakusu-menuitem").hidden = true;
 		}
 		Services.prefs.addObserver("extensions.yami.kakusu.statusbarpanel.enable", yamiKakusu, false);
 		if(kakusu.debug == true)
