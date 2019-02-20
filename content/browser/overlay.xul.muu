@@ -41,6 +41,17 @@
 			〉
 		〕
 	〕
+	〔menupopup 〈id “button_windowPopup”〉
+		〔menuitem 〈
+				accesskey “&yami.kakusu.menuitem.accesskey;”
+				key “kakusu-key”
+				id “button_kakusu-menuitem”
+				label “&yami.kakusu.menuitem.label;”
+				insertbefore “button_sep-window-list”
+				oncommand “yamiKakusu.hide(yamiKakusu.gethwnd());”
+			〉
+		〕
+	〕
 	〔menupopup 〈id “menu_FilePopup”〉
 		〔menuseparator 〈
 				id “kakusu-separator”
