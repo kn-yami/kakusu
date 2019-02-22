@@ -25,7 +25,7 @@ wndproc(HWND wnd, UINT msg, WPARAM wparam, LPARAM lparam)
 			GetCursorPos(&p);
 			SetForegroundWindow(dwnd);
 			TrackPopupMenu(popup, TPM_CENTERALIGN | TPM_BOTTOMALIGN,
-				p.x, p.y, 0, wnd, NULL);
+			    p.x, p.y, 0, wnd, NULL);
 		}
 		break;
 	case WM_COMMAND:
@@ -85,8 +85,6 @@ threadproc(LPVOID lparam)
 	lstrcpyW(ni.szTip, tip);
 	menu = LoadMenuW(mod, MAKEINTRESOURCEW(IDM_POPUPMENU));
 	popup = GetSubMenu(menu, 0);
-	if(popup == NULL)
-		Beep(200, 500);
 	WM_TASKBARCREATED = RegisterWindowMessageW(L"TaskbarCreated");
 	while(GetMessage(&msg, NULL, 0, 0)) {
 		TranslateMessage(&msg);
