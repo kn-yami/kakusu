@@ -1,7 +1,7 @@
 〔?xml 〈version “1.0” encoding “UTF-8”〉〕
 〔?xml-stylesheet 〈href “chrome://global/skin” type “text/css”〉〕
 〔?xml-stylesheet 〈href “chrome://kakusu/skin/overlay.css” type “text/css”〉〕
-〔!DOCTYPE options SYSTEM “chrome://kakusu/locale/overlay.dtd”〕
+〔!DOCTYPE overlay SYSTEM “chrome://kakusu/locale/overlay.dtd”〕
 〔overlay 〈
 		id “kakusu-overlay”
 		xmlns “http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul”
@@ -52,6 +52,17 @@
 			〉
 		〕
 	〕
+	〔menupopup 〈id “statusbar_windowPopup”〉
+		〔menuitem 〈
+				accesskey “&yami.kakusu.menuitem.accesskey;”
+				key “kakusu-key”
+				id “statusbar_kakusu-menuitem”
+				label “&yami.kakusu.menuitem.label;”
+				insertbefore “statusbar_sep-window-list”
+				oncommand “yamiKakusu.hide(yamiKakusu.gethwnd());”
+			〉
+		〕
+	〕
 	〔menupopup 〈id “menu_FilePopup”〉
 		〔menuseparator 〈
 				id “kakusu-separator”
@@ -96,6 +107,7 @@
 				id “kakusu-statusbarpanel”
 				insertafter “abp-status”
 				oncommand “yamiKakusu.hide(yamiKakusu.gethwnd('navigator:browser'));”
+				ordinal “2”
 				tooltiptext “&yami.kakusu.button.tooltip;”
 			〉
 		〕

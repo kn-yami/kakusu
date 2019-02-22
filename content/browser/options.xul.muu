@@ -3,22 +3,23 @@
 〔!DOCTYPE options SYSTEM “chrome://kakusu/locale/options.dtd”〕
 〔vbox 〈xmlns “http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul”〉
 	〔setting 〈
-			type “bool”
-			pref “extensions.yami.kakusu.icon.enable”
-			title “&yami.kakusu.options.enable.label;”
-			desc “&yami.kakusu.options.enable.desc;”
+		    type “bool”
+		    pref “extensions.yami.kakusu.icon.enable”
+		    title “&yami.kakusu.options.enable.label;”
+		    desc “&yami.kakusu.options.enable.desc;”
 		〉
 	〕
 	〔setting 〈
-			type “bool”
-			pref “extensions.yami.kakusu.icon.hide”
-			title “&yami.kakusu.options.hide.label;”
-			desc “&yami.kakusu.options.hide.desc;”
+		    type “bool”
+		    pref “extensions.yami.kakusu.icon.hide”
+		    title “&yami.kakusu.options.hide.label;”
+		    desc “&yami.kakusu.options.hide.desc;”
 		〉
 	〕
 	〔setting 〈
-			type “bool”
-			pref “extensions.yami.kakusu.statusbarpanel.enable”
-			title “&yami.kakusu.options.statusbarpanel.label;”
+		    type “bool”
+		    pref “extensions.yami.kakusu.statusbarpanel.enable”
+		    title “&yami.kakusu.options.statusbarpanel.label;”
 		〉
+	〕
 〕

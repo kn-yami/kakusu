@@ -31,7 +31,7 @@ LOCDIR=locale
 LOCALE=$LOCDIR/en-US/overlay.dtd $LOCDIR/en-US/options.dtd $LOCDIR/en-US/overlay.properties\
 	$LOCDIR/pl-PL/overlay.dtd $LOCDIR/pl-PL/options.dtd $LOCDIR/pl-PL/overlay.properties
 SKINDIR=skin
-META=install.rdf chrome.manifest
+META=install.rdf chrome.manifest README
 
 xpi:V: $CONTENT $COMPONENTS $LOCALE $MODULES skin $META $DEFAULTS
 	$ZIP ../!out/$NAME.xpi ../!out/$NAME/* > nul
@@ -54,6 +54,9 @@ xpi:V: $CONTENT $COMPONENTS $LOCALE $MODULES skin $META $DEFAULTS
 	$M2X <$stem.dtd.muu >../!out/$NAME/$stem.dtd
 %.rdf:V:
 	$M2X <$stem.rdf.muu >../!out/$NAME/$stem.rdf
+
+README:V:
+	$CP README ../!out/$NAME/README
 
 skin:V:
 	$CPD $SKINDIR ../!out/$NAME/

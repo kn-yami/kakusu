@@ -6,8 +6,8 @@
 	〔Description 〈
 			about “urn:mozilla:install-manifest”
 			em:id “kakusu@kurosu”
-			em:version “1.1.4”
-			em:license “COPYRIGHT”
+			em:version “1.1.6”
+			em:license “MPL-2.0”
 
 			em:name “kakusu”
 			em:creator “yami”
