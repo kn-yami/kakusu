@@ -14,7 +14,7 @@ __declspec(dllexport) BOOL
 addicon(void)
 {
 	return Shell_NotifyIconW(NIM_ADD, &ni) ||
-		Shell_NotifyIconW(NIM_SETVERSION, &ni);
+	    Shell_NotifyIconW(NIM_SETVERSION, &ni);
 }
 
 /* Modify the notification icon. */

@@ -6,7 +6,7 @@
 	〔Description 〈
 			about “urn:mozilla:install-manifest”
 			em:id “kakusu@kurosu”
-			em:version “1.1.6”
+			em:version “1.1.7a1”
 			em:license “MPL-2.0”
 
 			em:name “kakusu”

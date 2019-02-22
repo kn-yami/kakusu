@@ -74,7 +74,7 @@ threadproc(LPVOID lparam)
 	if(RegisterClassW(&wc) == FALSE)
 		return 1;
 	dwnd = CreateWindowW(wc.lpszClassName, (LPCWSTR)"kakusu dummy window",
-		WS_OVERLAPPEDWINDOW, 0, 0, 800, 500, NULL, NULL, mod, NULL);
+	    WS_OVERLAPPEDWINDOW, 0, 0, 800, 500, NULL, NULL, mod, NULL);
 	ni.cbSize = sizeof(ni);
 	ni.hWnd = dwnd;
 	ni.uID = 1;
