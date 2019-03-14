@@ -19,7 +19,7 @@ wndproc(HWND wnd, UINT msg, WPARAM wparam, LPARAM lparam)
 	case WM_APP:
 		if(LOWORD(lparam) == WM_LBUTTONUP) {
 			delmenu((UINT_PTR)lastwin);
-			showwin(lastwin);
+			frontwin(lastwin);
 		}
 		if(LOWORD(lparam) == WM_RBUTTONUP) {
 			GetCursorPos(&p);

@@ -10,9 +10,17 @@ hidewin(HWND wnd)
 	return ShowWindow(wnd, SW_HIDE);
 }
 
-/* Restore secified window. */
+/* Restore specified window. */
 __declspec(dllexport) BOOL
 showwin(HWND wnd)
 {
 	return ShowWindow(wnd, SW_SHOW);
+}
+
+/* Restore specified window and brings it to front. */
+__declspec(dllexport) BOOL
+frontwin(HWND wnd)
+{
+	return SetWindowPos(wnd, HWND_TOP, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE |
+	    SWP_SHOWWINDOW);
 }
