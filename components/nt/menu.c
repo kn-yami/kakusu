@@ -39,7 +39,6 @@ syncmenu(HWND wnd)
 	} else if(IsWindow(wnd) == FALSE) {
 		delmenu((UINT_PTR)wnd);
 		return TRUE;
-	} else {
+	} else
 		return FALSE;
-	}
 }
