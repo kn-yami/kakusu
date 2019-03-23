@@ -31,9 +31,9 @@ delmenu(UINT_PTR id)
 __declspec(dllexport) BOOL
 syncmenu(HWND wnd)
 {
-	if(IsWindow(wnd) == TRUE && IsWindowVisible(wnd) == FALSE) {
+	if(IsWindow(wnd) == TRUE && IsWindowVisible(wnd) == FALSE)
 		return FALSE;
-	} else if(IsWindow(wnd) == TRUE && IsWindowVisible(wnd) == TRUE) {
+	else if(IsWindow(wnd) == TRUE && IsWindowVisible(wnd) == TRUE) {
 		delmenu((UINT_PTR)wnd);
 		return TRUE;
 	} else if(IsWindow(wnd) == FALSE) {
