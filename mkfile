@@ -1,69 +1,86 @@
-ZIP=7za u -mx9 -tzip
+ZIP=7za
+ZIPFLAGS=a -mx9 -tzip kakusu.xpi
 M2X=m2x
-CP=cp
-CPD=cp -r
-TIDYFLAGS=-xml -b -e -q --indent-with-tabs yes --newline=LF --preserve-entities yes --input-xml yes --output-xml yes --mute UNKNOWN_ENTITY
-NAME=kakusu
 
-CTNDIR=content
-CONTENT=$CTNDIR/browser/overlay.js\
-	$CTNDIR/browser/overlay.xul\
-	$CTNDIR/browser/options.xul\
-	$CTNDIR/irc/overlay.js\
-	$CTNDIR/irc/overlay.xul\
-	$CTNDIR/irc/options.xul\
-	$CTNDIR/mailnews/overlay.js\
-	$CTNDIR/mailnews/overlay.xul\
-	$CTNDIR/mailnews/options.xul\
-	$CTNDIR/navigator/overlay.js\
-	$CTNDIR/navigator/overlay.xul\
-	$CTNDIR/navigator/options.xul\
-	$CTNDIR/navigator/task.js\
-	$CTNDIR/navigator/task.xul\
-	$CTNDIR/navigator/util.js\
-	$CTNDIR/navigator/util.xul
-CMPDIR=components
-COMPONENTS=$CMPDIR/nt/kakusu64.dll $CMPDIR/nt/kakusu32.dll
+CONTENT=\
+	content/browser/overlay.js\
+	content/browser/overlay.xul\
+	content/browser/options.xul\
+	\
+	content/irc/overlay.js\
+	content/irc/overlay.xul\
+	content/irc/options.xul\
+	\
+	content/mailnews/overlay.js\
+	content/mailnews/overlay.xul\
+	content/mailnews/options.xul\
+	\
+	content/navigator/overlay.js\
+	content/navigator/overlay.xul\
+	content/navigator/options.xul\
+	content/navigator/task.js\
+	content/navigator/task.xul\
+	content/navigator/util.js\
+	content/navigator/util.xul\
+
+COMPONENTS=\
+	components/nt/kakusu64.dll\
+	components/nt/kakusu32.dll\
+
 DEFAULTS=defaults/preferences/defaults.js
-MODDIR=modules
-MODULES=$MODDIR/kakusu.jsm
-LOCDIR=locale
-LOCALE=$LOCDIR/en-US/overlay.dtd $LOCDIR/en-US/options.dtd $LOCDIR/en-US/overlay.properties\
-	$LOCDIR/pl-PL/overlay.dtd $LOCDIR/pl-PL/options.dtd $LOCDIR/pl-PL/overlay.properties
-SKINDIR=skin
-META=install.rdf chrome.manifest README
 
-xpi:V: $CONTENT $COMPONENTS $LOCALE $MODULES skin $META $DEFAULTS
-	$ZIP ../!out/$NAME.xpi ../!out/$NAME/* > nul
+MODULES=\
+	modules/kakusu.jsm\
+
+LOCALE=\
+	locale/en-US/overlay.dtd\
+	locale/en-US/options.dtd\
+	locale/en-US/overlay.properties\
+	\
+	locale/pl-PL/overlay.dtd\
+	locale/pl-PL/options.dtd\
+	locale/pl-PL/overlay.properties\
+
+META=\
+	install.rdf\
+	chrome.manifest\
+	README\
+
+SKIN=\
+	skin/overlay.css\
+	skin/icon10.png\
+	skin/icon16.png\
+	skin/icon24.png\
+	skin/icon32.png\
+	skin/icon48.png\
+	skin/icon64.png\
+
+xpi:V: $CONTENT $COMPONENTS $LOCALE $MODULES $META $SKIN $DEFAULTS
+	;
 
 %.js:V:
-	$CP $stem.js ../!out/$NAME/$stem.js
+	$ZIP $ZIPFLAGS -si$stem.js <$stem.js >nul
 %.jsm:V:
-	$CP $stem.jsm ../!out/$NAME/$stem.jsm
+	$ZIP $ZIPFLAGS -si$stem.jsm <$stem.jsm >nul
 %.css:V:
-	$CP $stem.css ../!out/$NAME/$stem.css
+	$ZIP $ZIPFLAGS -si$stem.css <$stem.css >nul
+%.png:V:
+	$ZIP $ZIPFLAGS -si$stem.png <$stem.png >nul
 %.dll:V:
-	$CP $stem.dll ../!out/$NAME/$stem.dll
+	$ZIP $ZIPFLAGS -si$stem.dll <$stem.dll >nul
 %.manifest:V:
-	$CP $stem.manifest ../!out/$NAME/$stem.manifest
+	$ZIP $ZIPFLAGS -si$stem.manifest <$stem.manifest >nul
 %.properties:V:
-	$CP $stem.properties ../!out/$NAME/$stem.properties
+	$ZIP $ZIPFLAGS -si$stem.properties <$stem.properties >nul
 %.xul:V:
-	$M2X <$stem.xul.muu >../!out/$NAME/$stem.xul
+	$M2X <$stem.xul.muu | $ZIP $ZIPFLAGS -si$stem.xul >nul
 %.dtd:V:
-	$M2X <$stem.dtd.muu >../!out/$NAME/$stem.dtd
+	$M2X <$stem.dtd.muu | $ZIP $ZIPFLAGS -si$stem.dtd >nul
 %.rdf:V:
-	$M2X <$stem.rdf.muu >../!out/$NAME/$stem.rdf
+	$M2X <$stem.rdf.muu | $ZIP $ZIPFLAGS -si$stem.rdf >nul
 
 README:V:
-	$CP README ../!out/$NAME/README
-
-skin:V:
-	$CPD $SKINDIR ../!out/$NAME/
+	$ZIP $ZIPFLAGS -siREADME <README >nul
 
 clean:V:
-	rm ../!out/$NAME.xpi
-	rm ../!out/$NAME/$APP/$CONTENT
-	rm ../!out/$NAME/$LOCALE
-	rm ../!out/$NAME/$SKINDIR/*
-	rm ../!out/$NAME/$META
+	rm kakusu.xpi
